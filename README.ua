@@ -54,7 +54,7 @@ function isElementHiddenAttribute(element) {
 Зразки коду
 Тепер давайте об’єднаємо ці методи в комплексну функцію:
 
-JavaScript
+```JavaScript
 function isElementHidden(element) {
     const style = window.getComputedStyle(element);
     
@@ -81,6 +81,7 @@ function isElementHidden(element) {
     
     return false;
 }
+```
 Подальші дії
 Якщо деякі методи не підтримують кросбраузерність, розгляньте можливість використання полізаповнень або бібліотек, таких як [jQuery](https://jquery.com/), для ширшої сумісності.
 Завжди перевіряйте свій код у різних браузерах, щоб забезпечити узгоджену роботу.
