@@ -2,9 +2,9 @@
 
 ## Step 1: Basic visibility checks
 
-### Step 1: Check the display property
+### Substep 1: Check the display property
 
-You can check if an element is hidden by using its display property.
+You can check if an element is hidden by using its **display** property.
 
 ```JavaScript
 function isElementHiddenByDisplay(element) {
@@ -12,9 +12,9 @@ return window.getComputedStyle(element).display === 'none';
 }
 ```
 
-### Step 2: Check the visibility property
+### Substep 2: Check the visibility property
 
-You can check if an element is hidden by using its visibility property.
+You can check if an element is hidden by using its **visibility** property.
 
 ```JavaScript
 function isElementHiddenByVisibility(element) {
@@ -22,9 +22,9 @@ return window.getComputedStyle(element).visibility === 'hidden';
 }
 ```
 
-### Step 3: Use window.getComputedStyle() for precise checking
+### Substep 3: Use **_*window.getComputedStyle()*_** for precise checking
 
-Using window.getComputedStyle() provides the most precise visibility check because it takes inherited styles into account.
+Using **window.getComputedStyle()** provides the most precise visibility check because it takes inherited styles into account.
 
 ```JavaScript
 function isElementHiddenByComputedStyle(element) {
@@ -35,7 +35,7 @@ return style.display === 'none' || style.visibility === 'hidden';
 
 ## Step 2: Advanced visibility checks
 
-#### Substep 1: Check offsetWidth and offsetHeight
+#### Substep 1: Check **_*offsetWidth*_** and **_*offsetHeight*_**
 
 These properties help determine whether the element is rendered with the size.
 
@@ -45,7 +45,7 @@ return element.offsetWidth > 0 && element.offsetHeight > 0;
 }
 ```
 
-#### Substep 2: Check getBoundingClientRect()
+#### Substep 2: Check **_getBoundingClientRect()_**
 
 This method checks whether the element is in the viewport.
 
@@ -63,7 +63,7 @@ rect.right <= (window.innerWidth || document.documentElement.clientWidth)
 
 ## Step 3: Check the hidden property
 
-The hidden attribute in HTML5 can directly indicate whether an element is hidden.
+The hidden attribute in **_HTML5_** can directly indicate whether an element is hidden.
 
 ```JavaScript
 function isElementHiddenAttribute(element) {
@@ -103,6 +103,6 @@ return false;
 }
 ```
 
-What to do next
-If some methods are not cross-browser compatible, consider using polyfills or libraries such as [jQuery](https://jquery.com/) for wider compatibility.
+What to do next If some methods are not cross-browser compatible,
+consider using polyfills or libraries such as [jQuery](https://jquery.com/) for wider compatibility.
 Always test your code across browsers to ensure consistent behavior.
